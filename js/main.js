@@ -13,9 +13,33 @@ function dropdownMenu() {
     } else {
         navState.removeAttribute('class', 'activenav');
     }
-    // Remove class of activenav.
 }
 
 // Create listener for click on menu button
 var menuButton = document.getElementById('dropdown');
 menuButton.addEventListener('click', dropdownMenu);
+
+// COLOR CHANGE FUNCTION
+
+function colorChange() {
+    // Get the paragraph
+    var hoverChange = document.querySelector('.hoverChange');
+    hoverChange.setAttribute('class', 'hoverChange colorshift');
+    // Add a class
+}
+
+// Create listener for hover over paragraph
+var hoverTarget = document.getElementsByClassName('hoverChange');
+hoverTarget[0].addEventListener('mouseenter', colorChange);
+
+// REVERT TO ORGINIAL COLOR FUNCTION
+
+function colorRevert() {
+    // Get the paragraph
+    var hoverChange = document.querySelector('.hoverChange');
+    hoverChange.setAttribute('class', 'hoverChange');
+    // Add a class
+}
+
+// Create listener for hover over paragraph
+hoverTarget[0].addEventListener('mouseleave', colorRevert);
